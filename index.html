@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>JS Issue Tracker</title>
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body onload="fetchIssues()"> <!--calls function everytime app loads-->
+        <div class="container">
+            <h1>JS Issue Tracker <small>by Jon Esperanza</small></h1>
+            <div class="jumbotron">
+                <h3>Submit your problem</h3>
+            </br>
+                <form id="issueInputForm">
+                    <!--description input-->
+                    <div class="form-group">
+                        <label for="issueDescInput">Issue Description</label>
+                        <input type="text" class="form-control"
+                        id="issueDescInput" placeholder="Describe your issue...">
+                    </div>
+                    <!--severity input-->
+                    <div class="form-group">
+                        <label for="issueDescInput">Severity</label>
+                        <select class="form-control" id="issueSeverityInput">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="issueDescInput">Assigned To</label>
+                        <input type="text" class="form-control"
+                        id="issueAssignedToInput" placeholder="Who is responsible...">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Issue</button>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="issuesList">
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy Jon Esperanza</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!--main js file -->
+        <script src="main.js"></script> 
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--bootstrap-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"         
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--chancejs (small js lib)-->
+        <script src="http://chancejs.com/chance.min.js"></script>
+    </body>
+</html>
